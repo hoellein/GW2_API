@@ -1,0 +1,109 @@
+// data manually acquired on 2016-08-27
+// In-game dailies are:
+/*
+    PvE
+    - Ascalon Miner
+    - Heart of Maguuma Vista
+    - Snowden Drifts Events
+    - Weyandt's Revenge JP
+    PvP
+    - same as below
+    WvW
+    - same as below
+*/
+
+{
+"pve":[
+    {"id":1981,"level":{"min":1,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1839,"level":{"min":11,"max":79},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1839,"level":{"min":80,"max":80},"required_access":["GuildWars2"]},
+    {"id":2983,"level":{"min":80,"max":80},"required_access":["HeartOfThorns"]},
+    {"id":1953,"level":{"min":11,"max":14},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1956,"level":{"min":15,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1923,"level":{"min":31,"max":80},"required_access":["GuildWars2","HeartOfThorns"]}
+    ],
+"pvp":[
+    {"id":1857,"level":{"min":1,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1856,"level":{"min":11,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":2102,"level":{"min":11,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":2561,"level":{"min":31,"max":80},"required_access":["GuildWars2","HeartOfThorns"]}
+    ],
+"wvw":[
+    {"id":437,"level":{"min":1,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1846,"level":{"min":11,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1845,"level":{"min":11,"max":80},"required_access":["GuildWars2","HeartOfThorns"]},
+    {"id":1844,"level":{"min":31,"max":80},"required_access":["GuildWars2","HeartOfThorns"]}
+    ],
+"special":[
+    ]
+}
+
+// PvE
+// There are more returned from the API than displayed in-game
+// Same list appears in-game for L80 char and L02 char, HoT access is enabled
+// It appears to work like this:
+//  1. Check required_access
+//      filter out HoT or base specific (HoT supersedes base)
+//  2. Check account level (not toon level)
+//      L80 account, filter lower max level
+//      <L80 account, filter on range
+// Vista - Level 80 char with HoT
+[
+    {"id":1981,"name":"Daily Ascalon Miner",
+    "description":"Fueling the engines of the economy.","requirement":"Gather raw materials by mining ore in the following Ascalon maps: Plains of Ashford, Diessa Plateau, Fields of Ruin, Blazeridge Steppes, Iron Marches, and Fireheart Rise.","locked_text":"","type":"Default","flags":[],"tiers":[{"count":10,"points":0}],"rewards":[{"type":"Item","id":68137,"count":1}]},
+    
+    {"id":1839,"name":"Daily Kryta Vista Viewer",
+    "description":"Always on the lookout for a good view.","requirement":"View a vista in one of the following Kryta maps: Queensdale, Kessex Hills, Gendarran Fields, Harathi Hinterlands, Bloodtide Coast, and Southsun Cove.","locked_text":"","type":"Default","flags":[],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":68115,"count":1}]},
+    
+    {"id":2983,"name":"Daily Heart of Maguuma Vista Viewer",
+    "description":"Always on the lookout for a good view.","requirement":"View a vista in one of the following Heart of Maguuma maps: Verdant Brink, Auric Basin, Tangled Depths, and Dragon's Stand.","locked_text":"","type":"Default","flags":[],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":78561,"count":1}]},
+    
+    {"id":1953,"name":"Daily Wayfarer Foothills Event Completer",
+    "description":"Scour the mountains.","requirement":"Complete events in the Wayfarer Foothills in the Shiverpeak Mountains.","locked_text":"","type":"Default","flags":[],"tiers":[{"count":4,"points":0}],"rewards":[{"type":"Item","id":68149,"count":1}]},
+    
+    {"id":1956,"name":"Daily Snowden Drifts Event Completer",
+    "description":"Scour the mountains.","requirement":"Complete events in Snowden Drifts in the Shiverpeak Mountains.","locked_text":"","type":"Default","flags":[],"tiers":[{"count":4,"points":0}],"rewards":[{"type":"Item","id":68149,"count":1}]},
+    
+    {"id":1923,"name":"Daily Weyandt's Revenge Jumping Puzzle",
+    "description":"","requirement":"Complete the Weyandt's Revenge jumping puzzle in Lion's Arch.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":68162,"count":1}]}
+]
+
+// PvP
+[
+    {"id":1857,"name":"Daily PvP Rank Points",
+    "icon":"https://render.guildwars2.com/file/FE01AF14D91F52A1EF2B22FE0A552B9EE2E4C3F6/511340.png","description":"","requirement":"Earn  Rank Points in PvP matches.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":50,"points":0}],"rewards":[{"type":"Item","id":68117,"count":1}]},
+    {"id":1856,"name":"Daily PvP Reward Earner",
+    "icon":"https://render.guildwars2.com/file/FE01AF14D91F52A1EF2B22FE0A552B9EE2E4C3F6/511340.png","description":"","requirement":"Earn  reward from a PvP Reward Track.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":68117,"count":1}]},
+    {"id":2102,"name":"Daily Thief or Mesmer Winner","icon":"https://render.guildwars2.com/file/FE01AF14D91F52A1EF2B22FE0A552B9EE2E4C3F6/511340.png","description":"","requirement":"Win  PvP match as a thief or mesmer.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":68120,"count":1}]},
+    {"id":2561,"name":"Daily Revenant or Engineer Winner","icon":"https://render.guildwars2.com/file/FE01AF14D91F52A1EF2B22FE0A552B9EE2E4C3F6/511340.png","description":"","requirement":"Win  PvP match as a revenant or engineer.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":68120,"count":1}]}
+]
+
+//WvW
+[
+    {"id":437,"name":"Daily Mists Guard Killer",
+    "icon":"https://render.guildwars2.com/file/2BBA251A24A2C1A0A305D561580449AF5B55F54F/338457.png","description":"You took down the enemy's guards in the Mists.","requirement":"Kill  enemy guard NPCs.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":5,"points":0}],"rewards":[{"type":"Item","id":78485,"count":1}]},
+    {"id":1846,"name":"Daily WvW Invasion Defender",
+    "icon":"https://render.guildwars2.com/file/2BBA251A24A2C1A0A305D561580449AF5B55F54F/338457.png","description":"Not in my castle.","requirement":"Defeat enemy invaders in World vs. World.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":3,"points":0}],"rewards":[{"type":"Item","id":78485,"count":1}]},
+    {"id":1845,"name":"Daily WvW Keep Capturer",
+    "icon":"https://render.guildwars2.com/file/2BBA251A24A2C1A0A305D561580449AF5B55F54F/338457.png","description":"","requirement":"Capture a keep for your realm in World vs. World.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":78350,"count":1}]},
+    {"id":1844,"name":"Daily WvW Objective Defender",
+    "icon":"https://render.guildwars2.com/file/2BBA251A24A2C1A0A305D561580449AF5B55F54F/338457.png","description":"","requirement":"Defend a castle, keep, tower, or supply camp for your realm in World versus World.","locked_text":"","type":"Default","flags":["Pvp"],"tiers":[{"count":1,"points":0}],"rewards":[{"type":"Item","id":78353,"count":1}]}
+]
+
+// an instance of a daily fractal response
+{"id":2902,"name":"Daily Tier 2 Uncategorized",
+    "icon":"https://render.guildwars2.com/file/ABF6ED0AD392B3279E77D0D9346CFC65EE9C100F/1228224.png",
+    "description":"",
+    "requirement":"Complete Uncategorized at fractal scale 26 or higher.",
+    "locked_text":"",
+    "type":"Default",
+    "flags":[],
+    "bits":[
+        {"type":"Text","text":"Fractal Scale 36"},
+        {"type":"Text","text":"Fractal Scale 44"},
+        {"type":"Text","text":"Fractal Scale 62"},
+        {"type":"Text","text":"Fractal Scale 79"},
+        {"type":"Text","text":"Fractal Scale 91"}],
+    "tiers":[{"count":1,"points":0}],
+    "rewards":[{"type":"Item","id":78260,"count":1}]
+}

@@ -82,13 +82,23 @@ app.intent('GetDailiesToday', {
             }
             else {
                 //res.say("got a response from the API");
-                console.log(apiResp);
+                // This API just returns a list of IDs for the events.
+                //  Now need to get the specific info for these IDs.
+                //console.log(apiResp);
+                
                 var pve = apiResp.pve;
                 //console.log(pve);
                 var ids = '';
                 for(var ii=0; ii<pve.length; ii+=1) {
-                    if(ii>0) ids+=',';
-                    ids += pve[ii].id;
+                    // check level and required_access
+                    // Assume HoT access and account level == 80
+                    
+                    if ( (pve[ii].required_access.indexOf("HeartOfThorns") != -1)
+                            && (pve[ii].level.max == 80)) {
+                        if(ii>0) ids+=',';                        
+                        ids += pve[ii].id;
+                    }
+
                 }
                 console.log(ids);
                 makeGW2APIRequest('achievements', ids, function(err, apiResp2) {
@@ -206,6 +216,104 @@ app.intent('GetDailiesTomorrow', {
 
 
         });
+
+        if (apiResp == null) {
+            console.log("apiResp null");
+            //res.send();
+        }
+        else {
+            console.log('apiResp non-null');
+            console.log (apiResp);
+            //res.send();
+        }
+
+        //var today = requestDailiesToday();
+        //console.log("Today: ");
+        //console.log(today);
+
+        // IMPORTANT: this intent exits before the db call has completed
+        // so must return false to prevent premature response before the asynch call has returned      
+        return false;
+        
+    }
+    );
+
+//{"id":88,"name":"Daily Fractals","description":"","order":10,"icon":"https://render.guildwars2.com/file/4A5834E40CDC6A0C44085B1F697565002D71CD47/1228226.png","achievements":[2329,2153,2940,2902,2925,2939,2981,2991,2895,2967,2979,2985,2934,2966]}
+app.intent('GetFractalDailiesToday', {
+    'utterances':   ['{todays fractal dailies']
+    },
+    function (req, res) {
+        console.log("GetFractalDailiesToday");
+
+        /*-------------------------
+        getDailiesToday().then(
+            function (response) {
+                console.log('success - received today\'s dailies');
+                console.log(response);
+                
+            })
+        .catch(function(error) {
+            console.log(error);
+        });
+        ------------------*/
+
+        var apiResp = null;
+        makeGW2APIRequest('achievements/categories/88', null, function (err, apiResp){
+            //console.log(apiResp);
+            if(err) {
+                console.log("ERROR");
+                console.log(err);
+                res.say("Error from API call");
+                res.send();
+            }
+            else {
+                //res.say("got a response from the API");
+                // This API just returns a list of IDs for the events.
+                //  Now need to get the specific info for these IDs.
+                console.log(apiResp);
+                
+                var ach = apiResp.achievements;
+                //console.log(ach);
+                var ids = '';
+                for(var ii=0; ii<ach.length; ii+=1) {
+                        if(ii>0) ids+=',';                        
+                        ids += ach[ii];
+                    }
+
+                }
+                console.log(ids);
+                makeGW2APIRequest('achievements', ids, function(err, apiResp2) {
+                    if(err) {
+                        console.log(err);
+                        res.say("error from API call for ids");
+                        res.send();
+                    }
+                    else {
+                        console.log(apiResp2);
+                        var names = '';
+                        var namesCard = '';
+                        for(var jj=0; jj<apiResp2.length; jj+=1) {
+                            if(jj>0) names+=', ';
+                            names += apiResp2[jj].name;
+                            namesCard += apiResp2[jj].name + "\n";
+                            
+                        }
+                        var speech = "Today's Daily Fractals are " + names + ".";
+                        res.say(speech);
+
+                        var cardTitle = "Today's GW2 Daily Fractals";
+
+                        res.card({
+                            type: 'Simple',
+                            title: cardTitle,
+                            content: namesCard
+                        });
+                        res.send();
+                    }
+                });
+                
+            }
+        );
 
         if (apiResp == null) {
             console.log("apiResp null");

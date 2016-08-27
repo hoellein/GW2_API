@@ -1,6 +1,23 @@
 {
   "intents": [
-    
+    {
+      "intent": "GetDailiesToday"
+    },
+    {
+      "intent": "GetDailiesTomorrow"
+    },
+    {
+      "intent": "GetFractalDailiesToday"
+    },
+    {
+      "intent": "SetTimezoneIntent",
+      "slots": [
+        {
+          "name": "Timezone",
+          "type": "LIST_OF_TIMEZONES"
+        }
+      ]
+    },
     {
       "intent": "GetTimezoneIntent"
     },
@@ -15,3 +32,4 @@
     }
   ]
 }
+

@@ -2,12 +2,21 @@ GetDailiesToday get today
 GetDailiesToday get today's dailies
 GetDailiesToday get dailies
 GetDailiesToday get the dailies
+GetDailiesToday about today
 GetDailiesToday today
 
 GetDailiesTomorrow get tomorrow
 GetDailiesTomorrow get tomorrow's dailies
 GetDailiesTomorrow get dailies for tomorrow
 GetDailiesTomorrow get the dailies for tomorrow
+GetDailiesTomorrow about tomorrow
+GetDailiesTomorrow tomorrow
+
+GetFractalDailiesToday about daily fractals
+GetFractalDailiesToday about todays fractals
+GetFractalDailiesToday for daily fractals
+GetFractalDailiesToday for todays fractals
+GetFractalDailiesToday about fractals
 
 SetTimezoneIntent	set timezone
 SetTimezoneIntent	save timezone
@@ -28,5 +37,3 @@ GetTimezoneIntent what is the timezone
 GetTimezoneIntent what's the timezone
 GetTimezoneIntent get the timezone
 GetTimezoneIntent say the timezone
-
-

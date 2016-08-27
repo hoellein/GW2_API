@@ -1,0 +1,144 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/don/.nvm/versions/node/v4.3.2/bin/node',
+1 verbose cli   '/Users/don/.nvm/versions/node/v4.3.2/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--savcd',
+1 verbose cli   'srce',
+1 verbose cli   'request-promise' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.2
+4 verbose install initial load of /Users/don/Development/Alexa/GW2_API/package.json
+5 verbose installManyTop reading scoped package data from /Users/don/Development/Alexa/GW2_API/node_modules/request-promise/package.json
+6 verbose readDependencies loading dependencies from /Users/don/Development/Alexa/GW2_API/package.json
+7 silly cache add args [ 'srce', null ]
+8 verbose cache add spec srce
+9 verbose install request-promise is installed as 3.0.0
+10 silly cache add args [ 'request-promise', null ]
+11 verbose cache add spec request-promise
+12 silly cache add parsed spec Result {
+12 silly cache add   raw: 'srce',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'srce',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: 'latest',
+12 silly cache add   type: 'tag' }
+13 silly addNamed srce@latest
+14 verbose addNamed "latest" is being treated as a dist-tag for srce
+15 info addNameTag [ 'srce', 'latest' ]
+16 silly mapToRegistry name srce
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/srce
+20 verbose addNameTag registry:https://registry.npmjs.org/srce not in flight; fetching
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'request-promise',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'request-promise',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: 'latest',
+21 silly cache add   type: 'tag' }
+22 silly addNamed request-promise@latest
+23 verbose addNamed "latest" is being treated as a dist-tag for request-promise
+24 info addNameTag [ 'request-promise', 'latest' ]
+25 silly mapToRegistry name request-promise
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/request-promise
+29 verbose addNameTag registry:https://registry.npmjs.org/request-promise not in flight; fetching
+30 verbose request uri https://registry.npmjs.org/srce
+31 verbose request no auth needed
+32 info attempt registry request try #1 at 5:49:27 PM
+33 verbose request id 56dc05b1ddb42539
+34 http request GET https://registry.npmjs.org/srce
+35 verbose request uri https://registry.npmjs.org/request-promise
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 5:49:27 PM
+38 verbose etag "8BNLA5CP7CR0T02369VJDEH0G"
+39 http request GET https://registry.npmjs.org/request-promise
+40 http 304 https://registry.npmjs.org/request-promise
+41 verbose headers { date: 'Sun, 03 Jul 2016 21:49:27 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   etag: '"8BNLA5CP7CR0T02369VJDEH0G"',
+41 verbose headers   age: '55',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-iad2641-IAD',
+41 verbose headers   'x-cache': 'HIT',
+41 verbose headers   'x-cache-hits': '1',
+41 verbose headers   'x-timer': 'S1467582567.156543,VS0,VE0',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 silly get cb [ 304,
+42 silly get   { date: 'Sun, 03 Jul 2016 21:49:27 GMT',
+42 silly get     via: '1.1 varnish',
+42 silly get     'cache-control': 'max-age=300',
+42 silly get     etag: '"8BNLA5CP7CR0T02369VJDEH0G"',
+42 silly get     age: '55',
+42 silly get     connection: 'keep-alive',
+42 silly get     'x-served-by': 'cache-iad2641-IAD',
+42 silly get     'x-cache': 'HIT',
+42 silly get     'x-cache-hits': '1',
+42 silly get     'x-timer': 'S1467582567.156543,VS0,VE0',
+42 silly get     vary: 'Accept-Encoding' } ]
+43 verbose etag https://registry.npmjs.org/request-promise from cache
+44 verbose get saving request-promise to /Users/don/.npm/registry.npmjs.org/request-promise/.cache.json
+45 silly addNameTag next cb for request-promise with tag latest
+46 silly addNamed request-promise@3.0.0
+47 verbose addNamed "3.0.0" is a plain semver version for request-promise
+48 silly cache afterAdd request-promise@3.0.0
+49 verbose afterAdd /Users/don/.npm/request-promise/3.0.0/package/package.json not in flight; writing
+50 verbose afterAdd /Users/don/.npm/request-promise/3.0.0/package/package.json written
+51 http 404 https://registry.npmjs.org/srce
+52 verbose headers { 'content-type': 'application/json',
+52 verbose headers   'cache-control': 'max-age=0',
+52 verbose headers   'content-length': '2',
+52 verbose headers   'accept-ranges': 'bytes',
+52 verbose headers   date: 'Sun, 03 Jul 2016 21:49:27 GMT',
+52 verbose headers   via: '1.1 varnish',
+52 verbose headers   age: '0',
+52 verbose headers   connection: 'keep-alive',
+52 verbose headers   'x-served-by': 'cache-iad2121-IAD',
+52 verbose headers   'x-cache': 'MISS',
+52 verbose headers   'x-cache-hits': '0',
+52 verbose headers   'x-timer': 'S1467582567.161074,VS0,VE80',
+52 verbose headers   vary: 'Accept-Encoding' }
+53 silly get cb [ 404,
+53 silly get   { 'content-type': 'application/json',
+53 silly get     'cache-control': 'max-age=0',
+53 silly get     'content-length': '2',
+53 silly get     'accept-ranges': 'bytes',
+53 silly get     date: 'Sun, 03 Jul 2016 21:49:27 GMT',
+53 silly get     via: '1.1 varnish',
+53 silly get     age: '0',
+53 silly get     connection: 'keep-alive',
+53 silly get     'x-served-by': 'cache-iad2121-IAD',
+53 silly get     'x-cache': 'MISS',
+53 silly get     'x-cache-hits': '0',
+53 silly get     'x-timer': 'S1467582567.161074,VS0,VE80',
+53 silly get     vary: 'Accept-Encoding' } ]
+54 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/srce
+54 verbose stack     at makeError (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+54 verbose stack     at CachingRegistryClient.<anonymous> (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+54 verbose stack     at Request._callback (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+54 verbose stack     at Request.self.callback (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/request/request.js:198:22)
+54 verbose stack     at emitTwo (events.js:87:13)
+54 verbose stack     at Request.emit (events.js:172:7)
+54 verbose stack     at Request.<anonymous> (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+54 verbose stack     at emitOne (events.js:82:20)
+54 verbose stack     at Request.emit (events.js:169:7)
+54 verbose stack     at IncomingMessage.<anonymous> (/Users/don/.nvm/versions/node/v4.3.2/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+55 verbose statusCode 404
+56 verbose pkgid srce
+57 verbose cwd /Users/don/Development/Alexa/GW2_API
+58 error Darwin 15.5.0
+59 error argv "/Users/don/.nvm/versions/node/v4.3.2/bin/node" "/Users/don/.nvm/versions/node/v4.3.2/bin/npm" "install" "--savcd" "srce" "request-promise"
+60 error node v4.3.2
+61 error npm  v2.14.12
+62 error code E404
+63 error 404 Registry returned 404 for GET on https://registry.npmjs.org/srce
+63 error 404
+63 error 404 'srce' is not in the npm registry.
+63 error 404 You should bug the author to publish it (or use the name yourself!)
+63 error 404
+63 error 404 Note that you can also install from a
+63 error 404 tarball, folder, http url, or git url.
+64 verbose exit [ 1, true ]

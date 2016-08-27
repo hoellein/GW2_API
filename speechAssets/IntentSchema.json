@@ -1,0 +1,17 @@
+{
+  "intents": [
+    
+    {
+      "intent": "GetTimezoneIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

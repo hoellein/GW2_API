@@ -1,0 +1,21 @@
+{
+  "name": "gw2_api",
+  "version": "1.0.0",
+  "description": "node.js code for Alexa skill using GW2 API calls",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-app": "^2.3.3",
+    "dynasty": "^0.2.4",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "lodash": "^4.13.1",
+    "moment": "^2.12.0",
+    "moment-timezone": "^0.5.4",
+    "request-promise": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Don Hoellein",
+  "license": "ISC"
+}

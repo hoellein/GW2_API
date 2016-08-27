@@ -1,0 +1,32 @@
+GetDailiesToday get today
+GetDailiesToday get today's dailies
+GetDailiesToday get dailies
+GetDailiesToday get the dailies
+GetDailiesToday today
+
+GetDailiesTomorrow get tomorrow
+GetDailiesTomorrow get tomorrow's dailies
+GetDailiesTomorrow get dailies for tomorrow
+GetDailiesTomorrow get the dailies for tomorrow
+
+SetTimezoneIntent	set timezone
+SetTimezoneIntent	save timezone
+SetTimezoneIntent	save my timezone
+SetTimezoneIntent	set the timezone
+SetTimezoneIntent	save the timezone
+SetTimezoneIntent set my timezone
+SetTimezoneIntent set my timezone to {Timezone}
+SetTimezoneIntent change my timezone
+SetTimezoneIntent change my timezone to {Timezone}
+SetTimezoneIntent {Timezone}
+
+GetTimezoneIntent what is my timezone
+GetTimezoneIntent what's my timezone
+GetTimezoneIntent get my timezone
+GetTimezoneIntent say my timezone
+GetTimezoneIntent what is the timezone
+GetTimezoneIntent what's the timezone
+GetTimezoneIntent get the timezone
+GetTimezoneIntent say the timezone
+
+
